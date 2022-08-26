@@ -48,7 +48,7 @@ const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `
   <h1>Any Variable</h1>
   <h2>${notSure}</h2>
-`;*/
+`;
 function warnUser(): void {
   console.log('This is my warning message');
 }
@@ -65,4 +65,24 @@ appDiv.innerHTML = `
   <h1>Void<h1>
   <h2>${unusable}</h2>
   <h2>${myFunction}</h2>
+`;
+
+declare function create(o: object | null): void;
+create({ prop: 0 }); //ok
+create(null); //ok
+//create(42); erro
+//create('String'); erro
+//create(false); erro
+create(undefined); //ok*/
+let someValue: any = 'This is a string';
+let strLenght: number = (<string>someValue).length;
+
+let someValue2: any = 'This is another string!';
+let strLenght2: number = (someValue2 as string).length;
+
+const appDiv: HTMLElement = document.getElementById('app');
+appDiv.innerHTML = `
+  <h1>Type assertions</h1>
+  <h2>${strLenght}</h2>
+  <h2>${strLenght2}</h2>
 `;
