@@ -38,7 +38,7 @@ appDiv.innerHTML = `
   <h1>Enum<h1>
   <h2>Cor 1: ${color1}</h2>
   <h2>Cor 2: ${color2}</h2>
-`;*/
+`;
 
 let notSure: any = 4;
 notSure = 'Maybe I am a string';
@@ -48,4 +48,21 @@ const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `
   <h1>Any Variable</h1>
   <h2>${notSure}</h2>
+`;*/
+function warnUser(): void {
+  console.log('This is my warning message');
+}
+
+let myFunction: void = warnUser();
+
+let unusable: void = undefined;
+unusable = null;
+
+myFunction;
+
+const appDiv: HTMLElement = document.getElementById('app');
+appDiv.innerHTML = `
+  <h1>Void<h1>
+  <h2>${unusable}</h2>
+  <h2>${myFunction}</h2>
 `;
