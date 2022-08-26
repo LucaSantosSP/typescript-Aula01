@@ -73,7 +73,7 @@ create(null); //ok
 //create(42); erro
 //create('String'); erro
 //create(false); erro
-create(undefined); //ok*/
+create(undefined); //ok
 let someValue: any = 'This is a string';
 let strLenght: number = (<string>someValue).length;
 
@@ -85,4 +85,20 @@ appDiv.innerHTML = `
   <h1>Type assertions</h1>
   <h2>${strLenght}</h2>
   <h2>${strLenght2}</h2>
+`;*/
+
+function sum(n1: number, n2: number): number {
+  return n1 + n2;
+}
+
+function fullName(firstName: string, lastName: string): string {
+  return firstName + ' ' + lastName;
+}
+
+const appDiv: HTMLElement = document.getElementById('app');
+appDiv.innerHTML = `
+  <h1> Functions </h1>
+  <h2>Soma de 2 e 3: ${sum(2, 3)}</h2>
+  <h2>Soma de 11 e 329: ${sum(11, 329)}</h2>
+  <h2>Meu nome completo: ${fullName('Lucas', 'Santos')}</h2>
 `;
