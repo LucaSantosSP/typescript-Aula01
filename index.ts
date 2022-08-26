@@ -1,14 +1,10 @@
-// Import stylesheets
-import './style.css';
+let list: number[] = [1, 2, 3];
 
-// Write TypeScript code!
+let otherList: Array<number> = [1, 2, 3];
+
 const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
-
-console.log('Hello world');
-
-for (let i = 1; i <= 10; i++) {
-  if (i % 2 == 0) {
-    console.log(i);
-  }
-}
+appDiv.innerHTML = `
+<h1>Array declaration</h1>
+<h2>list: ${list}</h2>
+<h2>other List: ${otherList}</h2>
+`;
