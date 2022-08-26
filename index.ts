@@ -71,3 +71,21 @@ function alertMethod(this: HTMLElement, ev: Event) {
 
 const appH1: HTMLElement = document.getElementById('app.h1');
 appH1.innerHTML = title;*/
+
+class Greater {
+  greeting: string;
+  constructor(message: string) {
+    this.greeting = message;
+  }
+  greet() {
+    return 'Hello, ' + this.greeting;
+  }
+}
+
+let greeter = new Greater('My app');
+
+const appDiv: HTMLElement = document.getElementById('app');
+appDiv.innerHTML = `
+  <h1>Classes</h1>
+  <h2>${greeter.greet()}!</h2>
+`;
