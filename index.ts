@@ -82,7 +82,7 @@ class Greater {
   }
 }
 
-let greeter = new Greater('My app');
+let greeter = new Greater('Caiozito');
 
 const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `
